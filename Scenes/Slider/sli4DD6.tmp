@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmfw6ebm12rib"]
+
+[ext_resource type="Texture2D" uid="uid://bww81llk7jfx7" path="res://Assets/slider.png" id="1_5grjj"]
+[ext_resource type="Script" path="res://slideable.gd" id="1_pg52q"]
+
+[node name="Slider" type="Line2D"]
+points = PackedVector2Array(0, 0, 0, 100)
+default_color = Color(0, 0.5, 0.5, 1)
+
+[node name="Slideable" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_5grjj")
+script = ExtResource("1_pg52q")

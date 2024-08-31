@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://buboxoikq70se"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_12eev"]
+[ext_resource type="PackedScene" uid="uid://bmfw6ebm12rib" path="res://Scenes/Slider/slider.tscn" id="2_gwxtl"]
+[ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="3_lm33r"]
+[ext_resource type="PackedScene" uid="uid://bb2awmnpxgei6" path="res://Scenes/Laser/laser_emitter.tscn" id="4_wqp1r"]
+
+[node name="sandbox" type="Node2D"]
+script = ExtResource("1_12eev")
+
+[node name="Slider" parent="." instance=ExtResource("2_gwxtl")]
+position = Vector2(570, 257)
+points = PackedVector2Array(0, 0, 1, 288)
+
+[node name="SquareWall6" parent="Slider" instance=ExtResource("3_lm33r")]
+position = Vector2(91, -72)
+scale = Vector2(4.00001, -15.9248)
+inert = false
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall2" parent="." instance=ExtResource("3_lm33r")]
+position = Vector2(3, 325)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall3" parent="." instance=ExtResource("3_lm33r")]
+position = Vector2(1159, 337)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall4" parent="." instance=ExtResource("3_lm33r")]
+position = Vector2(565, -3)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall5" parent="." instance=ExtResource("3_lm33r")]
+position = Vector2(603, 655)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="LaserEmitter" parent="." instance=ExtResource("4_wqp1r")]
+position = Vector2(292, 473)
+rotation = -0.249339
+scale = Vector2(0.25, 0.25)
+
+[node name="SquareWall7" parent="." instance=ExtResource("3_lm33r")]
+position = Vector2(485, 184)
+scale = Vector2(3.28001, -15.9248)
+moss = true
+inert_color = Color(0, 0, 0, 1)

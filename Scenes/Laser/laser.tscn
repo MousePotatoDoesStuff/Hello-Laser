@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cof0xppj4u5fy"]
+
+[ext_resource type="Script" path="res://Scenes/Laser/laser.gd" id="1_gdw0q"]
+
+[node name="Laser" type="Node2D"]
+script = ExtResource("1_gdw0q")
+
+[node name="Ray" type="RayCast2D" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(51, 21, 162, 99, 668, 143)
+default_color = Color(1, 1, 1, 0.501961)
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+amount = 42
+lifetime = 2.0
+preprocess = 1.0
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 40.0
+scale_amount_min = 5.0
+scale_amount_max = 20.0

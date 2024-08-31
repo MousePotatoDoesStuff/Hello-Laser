@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="slider.svg"
+   inkscape:export-filename="C:\godot\Jams\IGU\igu_5408_3\Assets\slider.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="265.27335"
+     inkscape:cy="318.07612"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.432064;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.59237, 2.59237"
+       id="rect862"
+       width="80.534538"
+       height="23.363476"
+       x="9.4654608"
+       y="76.63652"
+       inkscape:export-xdpi="101.59991"
+       inkscape:export-ydpi="101.59991" />
+    <path
+       id="rect846"
+       style="fill:#810000;fill-opacity:1;stroke-width:3.99987;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:23.9992, 23.99919999999999831"
+       d="M 0,0 V 75.589844 L 37.794922,113.38672 V 264.56641 L 0,302.36133 v 75.59179 H 75.589844 V 302.36221 H 302.36133 v 75.59091 h 75.59179 V 302.36133 L 340.1582,264.56641 V 113.38672 L 377.95312,75.589844 V 0 Z"
+       transform="scale(0.26458333)"
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkscape:export-xdpi="101.59991"
+       inkscape:export-ydpi="101.59991" />
+  </g>
+</svg>

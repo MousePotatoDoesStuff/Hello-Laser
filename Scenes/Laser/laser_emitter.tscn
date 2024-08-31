@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb2awmnpxgei6"]
+
+[ext_resource type="PackedScene" uid="uid://cof0xppj4u5fy" path="res://Scenes/Laser/laser.tscn" id="1_4qtwo"]
+[ext_resource type="Texture2D" uid="uid://btr760em58k7i" path="res://Assets/laser_emitter.png" id="1_prt4n"]
+
+[node name="LaserEmitter" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-400, 0)
+texture = ExtResource("1_prt4n")
+
+[node name="Laser" parent="." instance=ExtResource("1_4qtwo")]
+show_behind_parent = true

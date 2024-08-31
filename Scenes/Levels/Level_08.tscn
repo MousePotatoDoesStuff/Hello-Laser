@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0yjyigul2t7b"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_ycutr"]
+[ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="2_of11g"]
+[ext_resource type="PackedScene" uid="uid://bmfw6ebm12rib" path="res://Scenes/Slider/slider.tscn" id="3_pvfd8"]
+[ext_resource type="PackedScene" uid="uid://bb2awmnpxgei6" path="res://Scenes/Laser/laser_emitter.tscn" id="4_nxkmm"]
+
+[node name="sandbox" type="Node2D"]
+script = ExtResource("1_ycutr")
+
+[node name="SquareWall7" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(562, 166)
+scale = Vector2(3.28001, -15.9248)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall6" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(531, 339)
+scale = Vector2(-0.287505, -34.4185)
+inert = false
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall2" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(3, -177)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall9" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(3, 875)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall3" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(1159, -177)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall10" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(1159, 875)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall4" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(565, -3)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall5" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(603, 655)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall8" parent="." instance=ExtResource("2_of11g")]
+position = Vector2(582, 334)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="Slider" parent="." instance=ExtResource("3_pvfd8")]
+position = Vector2(95, 569)
+points = PackedVector2Array(0, 0, -1, -460)
+
+[node name="Slider2" parent="Slider" instance=ExtResource("3_pvfd8")]
+position = Vector2(69, 0)
+points = PackedVector2Array(0, 0, 491, 2)
+
+[node name="LaserEmitter" parent="Slider/Slider2" instance=ExtResource("4_nxkmm")]
+position = Vector2(38, -67)
+rotation = -0.249339
+scale = Vector2(0.1, 0.1)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://lla1wdnhb4ti"]
+
+[ext_resource type="Texture2D" uid="uid://do2fqkpg5u5tk" path="res://Assets/rotator.png" id="1_k1lmy"]
+[ext_resource type="Script" path="res://Scenes/Rotator/rotator.gd" id="2_sjuwu"]
+
+[node name="Rotator" type="Sprite2D"]
+texture = ExtResource("1_k1lmy")
+script = ExtResource("2_sjuwu")

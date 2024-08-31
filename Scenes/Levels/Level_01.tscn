@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba6l8y5vjo0gw"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_ynnlg"]
+[ext_resource type="PackedScene" uid="uid://bmfw6ebm12rib" path="res://Scenes/Slider/slider.tscn" id="2_ny3c3"]
+[ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="3_h1u3b"]
+[ext_resource type="PackedScene" uid="uid://bb2awmnpxgei6" path="res://Scenes/Laser/laser_emitter.tscn" id="4_yml4w"]
+
+[node name="sandbox" type="Node2D"]
+script = ExtResource("1_ynnlg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 601.0
+offset_top = 531.0
+offset_right = 699.0
+offset_bottom = 585.0
+bbcode_enabled = true
+text = "[center]Pull me up
+\\(^o^)/"
+
+[node name="Slider" parent="." instance=ExtResource("2_ny3c3")]
+position = Vector2(576, 556)
+points = PackedVector2Array(0, 0, 0, -380)
+
+[node name="SquareWall7" parent="Slider" instance=ExtResource("3_h1u3b")]
+position = Vector2(-85, -73)
+scale = Vector2(3.28001, -15.9248)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall" parent="." instance=ExtResource("3_h1u3b")]
+position = Vector2(493, 179)
+scale = Vector2(4.00001, -15.9248)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall6" parent="." instance=ExtResource("3_h1u3b")]
+position = Vector2(661, 185)
+scale = Vector2(4.00001, -15.9248)
+inert = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall2" parent="." instance=ExtResource("3_h1u3b")]
+position = Vector2(3, 325)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall3" parent="." instance=ExtResource("3_h1u3b")]
+position = Vector2(1159, 337)
+scale = Vector2(2.54546, -53.8343)
+moss = true
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall4" parent="." instance=ExtResource("3_h1u3b")]
+position = Vector2(565, -3)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="SquareWall5" parent="." instance=ExtResource("3_h1u3b")]
+position = Vector2(603, 655)
+rotation = 1.57079
+scale = Vector2(2.54546, -60.4343)
+inert_color = Color(0, 0, 0, 1)
+
+[node name="LaserEmitter" parent="." instance=ExtResource("4_yml4w")]
+position = Vector2(292, 473)
+scale = Vector2(0.25, 0.25)

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgi2c68hyls6f"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_4op4d"]
+[ext_resource type="PackedScene" uid="uid://cof0xppj4u5fy" path="res://Scenes/Laser/laser.tscn" id="1_647va"]
+[ext_resource type="PackedScene" uid="uid://bmfw6ebm12rib" path="res://Scenes/Slider/slider.tscn" id="2_tek06"]
+[ext_resource type="PackedScene" uid="uid://lla1wdnhb4ti" path="res://Scenes/Rotator/rotator.tscn" id="3_2twmq"]
+[ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="6_grku4"]
+
+[node name="sandbox" type="Node2D"]
+script = ExtResource("1_4op4d")
+
+[node name="Slider" parent="." instance=ExtResource("2_tek06")]
+position = Vector2(138, 124)
+points = PackedVector2Array(0, 0, 940, 498)
+
+[node name="Rotator" parent="Slider" instance=ExtResource("3_2twmq")]
+position = Vector2(54, 0)
+scale = Vector2(0.1, 0.1)
+
+[node name="Laser2" parent="Slider/Rotator" instance=ExtResource("1_647va")]
+show_behind_parent = true
+position = Vector2(600, 0)
+scale = Vector2(0.5, 0.5)
+
+[node name="SquareWall" parent="." instance=ExtResource("6_grku4")]
+position = Vector2(495, 205)
+scale = Vector2(4.00001, -15.9248)
+moss = true
