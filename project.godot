@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="IGU_5408_3"
+config/name="Hello Laser"
 run/main_scene="res://Scenes/main_temp.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
