@@ -1,6 +1,8 @@
 @tool
 extends StaticBody2D
 
+signal ObjectiveComplete
+
 @export var moss:bool=false
 @export var inert=false
 @export var fire:float=0.0
@@ -11,15 +13,18 @@ extends StaticBody2D
 @export var wall_color:Color=Color.WEB_GRAY
 @export var inert_color:Color=Color.BLACK
 var isHit=false
-var level=self
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	var level=self
 	while level is not LevelClass:
 		level=level.get_parent()
-		assert(level != null)
+		if level == null:
+			return
+	var true_level:LevelClass=level
 	if moss:
-		level.add_objective()
+		true_level.add_objective()
+		ObjectiveComplete.connect(true_level.complete_objective)
 
 func _process(delta: float) -> void:
 	if moss:
@@ -29,7 +34,7 @@ func _process(delta: float) -> void:
 			fire-=delta/max(fire_end_time,0.001)
 			if fire<0.0:
 				fire=0.0
-				level.complete_objective()
+				ObjectiveComplete.emit()
 	isHit=false
 	var choice:Color=wall_color
 	if inert:
