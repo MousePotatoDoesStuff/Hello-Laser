@@ -1,10 +1,10 @@
-@tool
 extends StaticBody2D
 
 signal ObjectiveComplete
 
 @export var moss:bool=false
 @export var inert=false
+@export var fragile=false
 @export var fire:float=0.0
 @export var fire_start_time:float=1.0
 @export var fire_end_time:float=0.5
@@ -35,6 +35,8 @@ func _process(delta: float) -> void:
 			if fire<0.0:
 				fire=0.0
 				ObjectiveComplete.emit()
+				if fragile:
+					destroy()
 	isHit=false
 	var choice:Color=wall_color
 	if inert:
@@ -42,6 +44,8 @@ func _process(delta: float) -> void:
 	if moss:
 		choice=moss_color
 	$Appearance.color=choice.lerp(fire_color,fire)
+	if fragile and not moss and fire>0:
+		$Appearance.modulate.a=fire
 
 func fire_start(delta:float):
 	if fire<=0.0:
@@ -59,3 +63,6 @@ func laser_hit():
 	if moss:
 		fire+=0.001
 	return not (moss or inert)
+
+func destroy():
+	queue_free()
