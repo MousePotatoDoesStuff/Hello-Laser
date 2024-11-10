@@ -1,3 +1,4 @@
+@tool
 extends StaticBody2D
 
 signal ObjectiveComplete
@@ -27,6 +28,18 @@ func _ready() -> void:
 		ObjectiveComplete.connect(true_level.complete_objective)
 
 func _process(delta: float) -> void:
+	if not Engine.is_editor_hint():
+		active_process(delta)
+	var choice:Color=wall_color
+	if inert:
+		choice=inert_color
+	if moss:
+		choice=moss_color
+	$Appearance.color=choice.lerp(fire_color,fire)
+	if fragile and not moss and fire>0:
+		$Appearance.modulate.a=fire
+
+func active_process(delta: float):
 	if moss:
 		fire_start(delta)
 	else:
@@ -38,14 +51,7 @@ func _process(delta: float) -> void:
 				if fragile:
 					destroy()
 	isHit=false
-	var choice:Color=wall_color
-	if inert:
-		choice=inert_color
-	if moss:
-		choice=moss_color
-	$Appearance.color=choice.lerp(fire_color,fire)
-	if fragile and not moss and fire>0:
-		$Appearance.modulate.a=fire
+	return
 
 func fire_start(delta:float):
 	if fire<=0.0:

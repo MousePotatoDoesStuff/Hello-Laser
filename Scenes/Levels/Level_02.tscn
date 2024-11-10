@@ -17,27 +17,35 @@ position = Vector2(91, -72)
 scale = Vector2(4.00001, -15.9248)
 moss = true
 inert = false
-fragile = false
+fragile = true
 
 [node name="SquareWall2" parent="." instance=ExtResource("3_lm33r")]
 position = Vector2(3, 325)
 scale = Vector2(2.54546, -53.8343)
 moss = true
+inert = false
+fragile = false
 
 [node name="SquareWall3" parent="." instance=ExtResource("3_lm33r")]
 position = Vector2(1159, 337)
 scale = Vector2(2.54546, -53.8343)
 moss = true
+inert = false
+fragile = false
 
 [node name="SquareWall4" parent="." instance=ExtResource("3_lm33r")]
 position = Vector2(565, -3)
 rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
+inert = false
+fragile = false
 
 [node name="SquareWall5" parent="." instance=ExtResource("3_lm33r")]
 position = Vector2(603, 655)
 rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
+inert = false
+fragile = false
 
 [node name="LaserEmitter" parent="." instance=ExtResource("4_wqp1r")]
 position = Vector2(292, 473)
@@ -48,3 +56,5 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(485, 184)
 scale = Vector2(3.28001, -15.9248)
 moss = true
+inert = false
+fragile = false
