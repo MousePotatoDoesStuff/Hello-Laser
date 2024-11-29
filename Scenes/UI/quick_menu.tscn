@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqfkl0n1rlrtu"]
+
+[ext_resource type="Script" path="res://Scenes/UI/quick_menu.gd" id="1_pm5hd"]
+
+[node name="QuickMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_pm5hd")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.0190972
+anchor_top = 0.0401235
+anchor_right = 0.15625
+anchor_bottom = 0.135802
+offset_right = -79.0
+offset_bottom = -31.0
+scale = Vector2(2, 2)
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="Button" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.84375
+anchor_top = 0.0432099
+anchor_right = 0.980903
+anchor_bottom = 0.138889
+offset_right = -79.0
+offset_bottom = -31.0
+scale = Vector2(2, 2)
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

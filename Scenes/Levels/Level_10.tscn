@@ -13,59 +13,50 @@ script = ExtResource("1_pw1mp")
 position = Vector2(562, 166)
 scale = Vector2(3.28001, -15.9248)
 moss = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall6" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(531, 339)
 scale = Vector2(-0.287505, -34.4185)
 inert = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall2" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(3, -177)
 scale = Vector2(2.54546, -53.8343)
 moss = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall9" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(3, 875)
 scale = Vector2(2.54546, -53.8343)
 moss = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall3" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(1159, -177)
 scale = Vector2(2.54546, -53.8343)
 moss = true
 inert = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall10" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(1159, 875)
 scale = Vector2(2.54546, -53.8343)
 moss = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall4" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(565, -3)
 rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
 inert = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall5" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(603, 655)
 rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
 inert = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="SquareWall8" parent="." instance=ExtResource("2_78kdo")]
 position = Vector2(582, 334)
 rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
 inert = true
-inert_color = Color(0, 0, 0, 1)
 
 [node name="Slider" parent="." instance=ExtResource("3_gsfhi")]
 position = Vector2(495, 589)

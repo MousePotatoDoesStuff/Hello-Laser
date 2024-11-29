@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6t8yquw7d1n"]
+
+[ext_resource type="Texture2D" uid="uid://cqoyn6lv051ld" path="res://Assets/potato.bmp" id="1_hf4mf"]
+[ext_resource type="Script" path="res://Scenes/UI/thanksmenu.gd" id="1_jpo2l"]
+
+[node name="thanksmenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jpo2l")
+
+[node name="Potato" type="Sprite2D" parent="."]
+position = Vector2(557, 266)
+texture = ExtResource("1_hf4mf")
+
+[node name="End" type="Button" parent="."]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 536.0
+offset_right = 872.0
+offset_bottom = 632.0
+theme_override_font_sizes/font_size = 64
+text = "Back to main menu"
+
+[connection signal="pressed" from="End" to="." method="exit"]

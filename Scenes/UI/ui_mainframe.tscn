@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://yxg5kogu05at"]
+
+[ext_resource type="Script" path="res://Scenes/UI/ui_mainframe.gd" id="1_6akr2"]
+[ext_resource type="PackedScene" uid="uid://dqfkl0n1rlrtu" path="res://Scenes/UI/quick_menu.tscn" id="2_2hgcj"]
+[ext_resource type="PackedScene" uid="uid://c6t8yquw7d1n" path="res://Scenes/UI/thanksmenu.tscn" id="3_li074"]
+
+[node name="UI Mainframe" type="Control" node_paths=PackedStringArray("node_main", "node_quick", "node_thanks", "node_levels")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1200.0
+offset_bottom = 600.0
+script = ExtResource("1_6akr2")
+node_main = NodePath("MainMenu")
+node_quick = NodePath("QuickMenu")
+node_thanks = NodePath("thanksmenu")
+node_levels = NodePath("MainMenu/levels")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 54.0
+offset_right = 890.0
+offset_bottom = 191.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Hello Laser"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MainMenu"]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 258.0
+offset_right = 1120.0
+offset_bottom = 395.0
+theme_override_font_sizes/normal_font_size = 25
+text = "\"Hiding Your Reality\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/"
+fit_content = true
+
+[node name="levels" type="VBoxContainer" parent="MainMenu"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 190.0
+offset_right = 312.0
+offset_bottom = 620.0
+
+[node name="QuickMenu" parent="." instance=ExtResource("2_2hgcj")]
+
+[node name="thanksmenu" parent="." instance=ExtResource("3_li074")]
+
+[connection signal="back_signal" from="QuickMenu" to="." method="close_level"]
+[connection signal="next_signal" from="QuickMenu" to="." method="next_level"]
+[connection signal="backSignal" from="thanksmenu" to="." method="swap_to" binds= [0]]

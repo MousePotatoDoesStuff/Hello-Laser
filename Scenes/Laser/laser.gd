@@ -9,7 +9,7 @@ var rot:float=0.0
 
 var lasers=[]
 
-@onready var line:Line2D=$Line2D
+@export var lineobject:Line2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	lasers.append($Ray)
@@ -20,15 +20,15 @@ func _ready() -> void:
 		add_child(raycast)
 		lasers.append(raycast)
 	max_cast_to=Vector2(INF_LEN,0).rotated(rot)
-	$Line2D.top_level=true
+	lineobject.top_level=true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if follow_mouse:
 		rot=get_local_mouse_position().angle()
-	line.clear_points()
-	line.add_point(global_position)
+	lineobject.clear_points()
+	lineobject.add_point(global_position)
 	max_cast_to=Vector2(INF_LEN,0).rotated(rot)
 	var idx=0
 	for raycast:RayCast2D in lasers:
@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 		if collider.has_method("laser_hit"):
 			is_bounceable=collider.call("laser_hit")
 		max_cast_to+=raycast.position-rcol
-		line.add_point(rcol)
+		lineobject.add_point(rcol)
 		var maxnorm=max_cast_to.normalized()
 		var normal=raycast.get_collision_normal().rotated(-global_rotation).normalized()
 		var norm=maxnorm.bounce(normal).normalized()
@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 			return
 
 func end_ray(idx, raycast):
-	line.add_point(global_position+max_cast_to)
+	lineobject.add_point(global_position+max_cast_to)
 	if idx==1:
 		raycast.target_position=max_cast_to
 		$Particles.global_position=global_position+max_cast_to

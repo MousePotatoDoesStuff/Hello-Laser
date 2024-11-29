@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dlqu4ydyswvky"]
 
 [ext_resource type="Script" path="res://Scenes/main_temp.gd" id="1_dishi"]
-[ext_resource type="Texture2D" uid="uid://cqoyn6lv051ld" path="res://Assets/potato.bmp" id="2_3op6a"]
+[ext_resource type="PackedScene" uid="uid://yxg5kogu05at" path="res://Scenes/UI/ui_mainframe.tscn" id="3_mhnqx"]
 [ext_resource type="AudioStream" uid="uid://fq1q80yxsoh" path="res://Assets/Hiding Your Reality.mp3" id="3_yvbek"]
 
 [node name="MainTemp" type="Node2D"]
@@ -9,98 +9,13 @@ script = ExtResource("1_dishi")
 
 [node name="Loader" type="Node2D" parent="."]
 
-[node name="MainMenu" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MainMenu"]
-layout_mode = 0
-offset_left = 312.0
-offset_top = 54.0
-offset_right = 890.0
-offset_bottom = 191.0
-theme_override_font_sizes/normal_font_size = 100
-text = "Hello Laser"
-fit_content = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="MainMenu"]
-layout_mode = 0
-offset_left = 542.0
-offset_top = 258.0
-offset_right = 1120.0
-offset_bottom = 395.0
-theme_override_font_sizes/normal_font_size = 25
-text = "\"Hiding Your Reality\" Kevin MacLeod (incompetech.com)
-Licensed under Creative Commons: By Attribution 4.0 License
-http://creativecommons.org/licenses/by/4.0/"
-fit_content = true
-
-[node name="levels" type="VBoxContainer" parent="MainMenu"]
-layout_mode = 0
-offset_left = 28.0
-offset_top = 190.0
-offset_right = 312.0
-offset_bottom = 620.0
-
-[node name="QuickMenu" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="Back" type="Button" parent="QuickMenu"]
-layout_mode = 0
-anchor_left = 0.0190972
-anchor_top = 0.0401235
-anchor_right = 0.15625
-anchor_bottom = 0.135802
-offset_right = -79.0
-offset_bottom = -31.0
-scale = Vector2(2, 2)
-text = "Back"
-metadata/_edit_use_anchors_ = true
-
-[node name="Next" type="Button" parent="QuickMenu"]
-visible = false
-layout_mode = 0
-anchor_left = 0.84375
-anchor_top = 0.0432099
-anchor_right = 0.980903
-anchor_bottom = 0.138889
-offset_right = -79.0
-offset_bottom = -31.0
-scale = Vector2(2, 2)
-text = "Next"
-metadata/_edit_use_anchors_ = true
-
-[node name="thanksmenu" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Potato" type="Sprite2D" parent="thanksmenu"]
-position = Vector2(557, 266)
-texture = ExtResource("2_3op6a")
-
-[node name="End" type="Button" parent="thanksmenu"]
-layout_mode = 0
-offset_left = 266.0
-offset_top = 536.0
-offset_right = 872.0
-offset_bottom = 632.0
-theme_override_font_sizes/font_size = 64
-text = "Back to main menu"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_yvbek")
 autoplay = true
 parameters/looping = true
 
-[connection signal="pressed" from="QuickMenu/Back" to="." method="close_level"]
-[connection signal="pressed" from="QuickMenu/Next" to="." method="next_level"]
-[connection signal="pressed" from="thanksmenu/End" to="." method="backtomain"]
+[node name="UI Mainframe" parent="." instance=ExtResource("3_mhnqx")]
+completed = 10
+
+[connection signal="EndLevel" from="UI Mainframe" to="." method="remove_level"]
+[connection signal="StartLevel" from="UI Mainframe" to="." method="start_level"]

@@ -32,6 +32,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not Engine.is_editor_hint():
 		active_process(delta)
+	always_process(delta)
+
+func always_process(_delta: float):
 	var choice:Color=wall_color
 	if inert:
 		choice=inert_color
