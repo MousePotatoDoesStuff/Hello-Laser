@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://5wi4h24bhl3i"]
+
+[ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="1_u1t04"]
+
+[node name="Border" type="Node2D"]
+
+[node name="BorderLeft" parent="." instance=ExtResource("1_u1t04")]
+position = Vector2(0, 300)
+scale = Vector2(1, 30)
+
+[node name="BorderRight" parent="." instance=ExtResource("1_u1t04")]
+position = Vector2(1200, 300)
+scale = Vector2(1, 30)
+
+[node name="BorderUp" parent="." instance=ExtResource("1_u1t04")]
+position = Vector2(600, 0)
+scale = Vector2(60, 1)
+
+[node name="BorderDown" parent="." instance=ExtResource("1_u1t04")]
+position = Vector2(600, 600)
+scale = Vector2(60, 1)

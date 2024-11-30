@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://c0nwy5p8fsihu"]
 
-[ext_resource type="Script" path="res://Scripts/PolygonAppearance.gd" id="1_ih5kq"]
+[ext_resource type="Script" path="res://Scripts/polygon_appearance.gd" id="1_ih5kq"]
 [ext_resource type="Script" path="res://Scenes/Wall/wall.gd" id="1_y3x6d"]
+
 
 [node name="Wall" type="StaticBody2D"]
 script = ExtResource("1_y3x6d")

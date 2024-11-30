@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0yjyigul2t7b"]
 
-[ext_resource type="Script" path="res://Scripts/level.gd" id="1_ycutr"]
+[ext_resource type="Script" path="res://Scenes/Levels/level.gd" id="1_ycutr"]
 [ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="2_of11g"]
 [ext_resource type="PackedScene" uid="uid://bmfw6ebm12rib" path="res://Scenes/Slider/slider.tscn" id="3_pvfd8"]
 [ext_resource type="PackedScene" uid="uid://bb2awmnpxgei6" path="res://Scenes/Laser/laser_emitter.tscn" id="4_nxkmm"]
+
 
 [node name="sandbox" type="Node2D"]
 script = ExtResource("1_ycutr")

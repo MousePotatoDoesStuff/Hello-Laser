@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ba6l8y5vjo0gw"]
 
-[ext_resource type="Script" path="res://Scripts/level.gd" id="1_ynnlg"]
+[ext_resource type="Script" path="res://Scenes/Levels/level.gd" id="1_ynnlg"]
 [ext_resource type="PackedScene" uid="uid://bmfw6ebm12rib" path="res://Scenes/Slider/slider.tscn" id="2_ny3c3"]
 [ext_resource type="PackedScene" uid="uid://bndt3ujs63yff" path="res://Scenes/Wall/square_wall.tscn" id="3_h1u3b"]
 [ext_resource type="PackedScene" uid="uid://bb2awmnpxgei6" path="res://Scenes/Laser/laser_emitter.tscn" id="4_yml4w"]
@@ -9,16 +9,16 @@
 script = ExtResource("1_ynnlg")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 601.0
-offset_top = 531.0
-offset_right = 699.0
-offset_bottom = 585.0
+offset_left = 627.0
+offset_top = 482.0
+offset_right = 725.0
+offset_bottom = 536.0
 bbcode_enabled = true
 text = "[center]Pull me up
 \\(^o^)/"
 
 [node name="Slider" parent="." instance=ExtResource("2_ny3c3")]
-position = Vector2(576, 556)
+position = Vector2(575, 506)
 points = PackedVector2Array(0, 0, 0, -380)
 
 [node name="SquareWall7" parent="Slider" instance=ExtResource("3_h1u3b")]
@@ -51,7 +51,7 @@ rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
 
 [node name="SquareWall5" parent="." instance=ExtResource("3_h1u3b")]
-position = Vector2(603, 655)
+position = Vector2(586, 596)
 rotation = 1.57079
 scale = Vector2(2.54546, -60.4343)
 
